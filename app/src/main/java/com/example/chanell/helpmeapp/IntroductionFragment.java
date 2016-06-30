@@ -1,4 +1,4 @@
-package layout;
+package com.example.chanell.helpmeapp;
 
 import android.content.Context;
 import android.net.Uri;
