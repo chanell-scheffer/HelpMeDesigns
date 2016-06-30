@@ -52,7 +52,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welocme to HelpMe...!
+            android:text="
+                   Welocme to HelpMe...!
 
 This is a great way of learning. After using this app, you will NEVER have to struggle with Math again.
 
@@ -63,6 +64,7 @@ Its that SIMPLE.
 
 HAVE FUN...!!(^= ^)"
             android:id="@+id/textView4"
+
             android:textSize="20dp"
             android:textColor="@android:color/white"
             android:layout_below="@+id/scrollView"
