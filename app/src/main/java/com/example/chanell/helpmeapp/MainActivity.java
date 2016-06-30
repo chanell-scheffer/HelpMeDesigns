@@ -11,12 +11,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link IntroductionFragment.OnFragmentInteractionListener} interface
+ * {@link MainActivity.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link IntroductionFragment#newInstance} factory method to
+ * Use the {@link MainActivity#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class IntroductionFragment extends Fragment {
+public class MainActivity extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,7 +28,7 @@ public class IntroductionFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public IntroductionFragment() {
+    public MainActivity() {
         // Required empty public constructor
     }
 
@@ -38,11 +38,11 @@ public class IntroductionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment IntroductionFragment.
+     * @return A new instance of fragment MainActivity.
      */
     // TODO: Rename and change types and number of parameters
-    public static IntroductionFragment newInstance(String param1, String param2) {
-        IntroductionFragment fragment = new IntroductionFragment();
+    public static MainActivity newInstance(String param1, String param2) {
+        MainActivity fragment = new MainActivity();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +63,7 @@ public class IntroductionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_introduction, container, false);
+        return inflater.inflate(R.layout.activity_main, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -95,7 +95,7 @@ public class IntroductionFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p>
+     * <p/>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
