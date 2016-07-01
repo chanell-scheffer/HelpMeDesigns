@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/c"
+    android:background="@android:color/transparent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="INTRODUCTION"
+        android:textSize="55dp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="casual"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="WHAT IS ALL THIS ABOUT...??\n"
+        android:textSize="20dp"
+        android:fontFamily="casual"
+        android:textColor="@android:color/holo_blue_light"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+                   Welcome to HelpMe...!\n\nThis is a great way of learning. After using this app, you will NEVER have to struggle with Math again.\n\nHelpMe is an app that helps students solve mathematical problems simpler...
+just by taking a picture of your Maths problem and upload the picture, receiving the solution in seconds.\n\nIts that SIMPLE.\n\nHAVE FUN...!!(^= ^)"
+            android:id="@+id/textView4"
+
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true" />
+
+</ScrollView>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:text="CONTINUE..."
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/continue_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

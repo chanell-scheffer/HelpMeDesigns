@@ -1,47 +1,32 @@
 package com.example.chanell.helpmeapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.TextView;
-import android.content.Intent;
 
-public class HomeActivity extends AppCompatActivity {
+public class IntroductionActivity extends AppCompatActivity {
 
-
-    Button getStartedButton;
-
-    public void zoom(View view) {
-        TextView textView = (TextView) findViewById(R.id.WelcomeTo);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);
-        textView.startAnimation(animation);
-    }
+    Button continueButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_introduction);
 
-        getStartedButton = (Button) findViewById(R.id.get_started_button);
-        getStartedButton.setOnClickListener(new View.OnClickListener() {
+        continueButton = (Button) findViewById(R.id.continue_button);
+        continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, IntroductionActivity.class);
+                Intent intent = new Intent(IntroductionActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        TextView textView = (TextView) findViewById(R.id.WelcomeTo);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);
-        animation.setRepeatCount(Animation.INFINITE);
-        textView.startAnimation(animation);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -63,5 +48,4 @@ public class HomeActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
