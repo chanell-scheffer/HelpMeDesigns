@@ -7,10 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class HomeActivity extends AppCompatActivity {
 
+
+    Button getStartedButton;
 
     public void zoom(View view) {
         TextView textView = (TextView) findViewById(R.id.WelcomeTo);
@@ -22,6 +26,15 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        getStartedButton = (Button) findViewById(R.id.get_started_button);
+        getStartedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, IntroductionActivity.class);
+                startActivity(intent);
+            }
+        });
 
         TextView textView = (TextView) findViewById(R.id.WelcomeTo);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);

@@ -31,8 +31,8 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WHAT IS ALL THIS ABOUT...??"
+        android:layout_height="30dp"
+        android:text="WHAT IS ALL THIS ABOUT...??\n"
         android:textSize="20dp"
         android:fontFamily="casual"
         android:textColor="@android:color/holo_blue_light"
@@ -52,16 +52,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="
-                   Welocme to HelpMe...!
-
-This is a great way of learning. After using this app, you will NEVER have to struggle with Math again.
-
-HelpMe is an app that helps students solve mathematical problems simpler...
-just by taking a picture of your Maths problem and upload the picture, receiving the solution in seconds.
-
-Its that SIMPLE.
-
-HAVE FUN...!!(^= ^)"
+                   Welcome to HelpMe...!\n\nThis is a great way of learning. After using this app, you will NEVER have to struggle with Math again.\n\nHelpMe is an app that helps students solve mathematical problems simpler...
+just by taking a picture of your Maths problem and upload the picture, receiving the solution in seconds.\n\nIts that SIMPLE.\n\nHAVE FUN...!!(^= ^)"
             android:id="@+id/textView4"
 
             android:textSize="20dp"
@@ -78,7 +70,7 @@ HAVE FUN...!!(^= ^)"
         android:textStyle="bold"
         android:fontFamily="casual"
         android:background="@android:color/holo_blue_dark"
-        android:id="@+id/button2"
+        android:id="@+id/continue_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
