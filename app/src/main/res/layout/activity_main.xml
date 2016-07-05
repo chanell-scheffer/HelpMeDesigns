@@ -12,9 +12,9 @@
         android:id="@+id/imageView"
         android:src="@drawable/background"
         android:scaleType="centerCrop"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="100dp"
@@ -52,6 +52,146 @@
         android:layout_alignStart="@+id/imageView3"
         android:layout_marginTop="34dp" />
 
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/searchView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="100dp"
+                android:id="@+id/logic"
+                android:src="@drawable/logic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <ImageButton
+                android:layout_width="230dp"
+                android:layout_height="110dp"
+                android:id="@+id/definition"
+                android:src="@drawable/definition"
+                android:layout_below="@+id/logic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+               />
+
+            <ImageButton
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:id="@+id/discretemath"
+                android:src="@drawable/discretemath"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="131dp"
+                android:id="@+id/calculus"
+                android:src="@drawable/calculus"
+                android:layout_below="@+id/discretemath"
+                android:layout_toRightOf="@+id/definition"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/functions"
+                android:src="@drawable/functions"
+                android:layout_below="@+id/definition"
+                android:layout_toLeftOf="@+id/discretemath"
+                android:layout_toStartOf="@+id/discretemath"
+                />
+
+            <ImageButton
+                android:layout_width="370dp"
+                android:layout_height="130dp"
+                android:id="@+id/trigonometry"
+                android:src="@drawable/trigonometry"
+                android:layout_below="@+id/calculus"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageButton
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:src="@drawable/geometry"
+                android:id="@+id/geometry"
+                android:layout_below="@+id/trigonometry"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/appliedmath"
+                android:src="@drawable/appliedmath"
+                android:layout_alignTop="@+id/geometry"
+                android:layout_toRightOf="@+id/geometry"
+                android:layout_toEndOf="@+id/geometry"
+               />
+
+            <ImageButton
+                android:layout_width="400dp"
+                android:layout_height="130dp"
+                android:id="@+id/algebra"
+                android:src="@drawable/algebra"
+                android:layout_below="@+id/geometry"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+               />
+
+            <ImageButton
+                android:layout_width="270dp"
+                android:layout_height="100dp"
+                android:id="@+id/elementarymath"
+                android:src="@drawable/elementarymath"
+                android:layout_below="@+id/algebra"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="220dp"
+                android:layout_height="107dp"
+                android:id="@+id/numbers"
+                android:src="@drawable/numbers"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/elementarymath" />
+
+            <ImageButton
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:id="@+id/plotting"
+                android:src="@drawable/plotting"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:id="@+id/elipses"
+                android:src="@drawable/elipses"
+                android:layout_alignTop="@+id/numbers"
+                android:layout_toRightOf="@+id/numbers"
+                android:layout_toEndOf="@+id/numbers" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>
