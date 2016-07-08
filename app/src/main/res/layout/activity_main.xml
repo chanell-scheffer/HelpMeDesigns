@@ -10,16 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/imageView"
-        android:src="@drawable/background"
+        android:src="@drawable/starbucks"
         android:scaleType="centerCrop"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBottom="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="90dp"
-        android:id="@+id/imageView3"
+        android:id="@+id/logo"
         android:src="@drawable/logo"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -35,163 +35,387 @@
         android:text="HELP ME..."
         android:textColor="@android:color/holo_orange_light"
         android:fontFamily="casual"
+        android:textSize="60dp"
+        android:id="@+id/help_me_text"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_toEndOf="@+id/logo" />
 
-        android:textSize="50dp"
-        android:id="@+id/textView5"
-        android:layout_alignTop="@+id/imageView3"
-        android:layout_toRightOf="@+id/imageView3"
-        android:layout_toEndOf="@+id/imageView3" />
+    <!--<SearchView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/searchView"-->
+        <!--android:searchIcon="@android:drawable/ic_search_category_default"-->
+        <!--android:layout_below="@+id/logo"-->
+        <!--android:layout_marginTop="34dp"-->
+        <!--android:foreground="@android:color/white" />-->
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <EditText
         android:id="@+id/searchView"
-        android:searchIcon="@android:drawable/ic_search_category_default"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignLeft="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3"
-        android:layout_marginTop="34dp" />
-
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/logo"
+        android:layout_alignLeft="@+id/logo"
+        android:layout_alignStart="@+id/logo" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_below="@+id/searchView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
+        android:layout_centerInParent="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageButton
-                android:layout_width="240dp"
-                android:layout_height="100dp"
-                android:id="@+id/logic"
-                android:src="@drawable/logic"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/searchView"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="230dp"
-                android:layout_height="110dp"
-                android:id="@+id/definition"
-                android:src="@drawable/definition"
-                android:layout_below="@+id/logic"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-               />
+<TextView
+    android:layout_width="wrap_content"
+    android:textSize="25dp"
+    android:layout_height="wrap_content"
+    android:text="@string/algebra"
+    android:textColor="@android:color/white"
+    android:clickable="true"
+    android:id="@+id/algebra"
+    android:layout_gravity="center"/>
 
-            <ImageButton
-                android:layout_width="180dp"
-                android:layout_height="140dp"
-                android:id="@+id/discretemath"
-                android:src="@drawable/discretemath"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:text="@string/applied_math"
+    android:id="@+id/applied_math"
+    android:clickable="true"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true" />
 
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="131dp"
-                android:id="@+id/calculus"
-                android:src="@drawable/calculus"
-                android:layout_below="@+id/discretemath"
-                android:layout_toRightOf="@+id/definition"
-                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:text="@string/calculus"
+    android:clickable="true"
+    android:id="@+id/calculus"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"/>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:id="@+id/functions"
-                android:src="@drawable/functions"
-                android:layout_below="@+id/definition"
-                android:layout_toLeftOf="@+id/discretemath"
-                android:layout_toStartOf="@+id/discretemath"
-                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/definition"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:clickable="true"
+    android:id="@+id/definition"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"/>
 
-            <ImageButton
-                android:layout_width="370dp"
-                android:layout_height="130dp"
-                android:id="@+id/trigonometry"
-                android:src="@drawable/trigonometry"
-                android:layout_below="@+id/calculus"
-                android:layout_centerHorizontal="true"
-                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/discrete_math"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:clickable="true"
+    android:id="@+id/discrete_math"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="220dp"
-                android:layout_height="100dp"
-                android:src="@drawable/geometry"
-                android:id="@+id/geometry"
-                android:layout_below="@+id/trigonometry"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:text="@string/elementary_math"
+    android:clickable="true"
+    android:id="@+id/elementary_math"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:id="@+id/appliedmath"
-                android:src="@drawable/appliedmath"
-                android:layout_alignTop="@+id/geometry"
-                android:layout_toRightOf="@+id/geometry"
-                android:layout_toEndOf="@+id/geometry"
-               />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/ellipses"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:id="@+id/ellipses"
+    android:clickable="true"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="400dp"
-                android:layout_height="130dp"
-                android:id="@+id/algebra"
-                android:src="@drawable/algebra"
-                android:layout_below="@+id/geometry"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-               />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/functions"
+    android:textSize="25dp"
+    android:textColor="@android:color/white"
+    android:clickable="true"
+    android:id="@+id/functions"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="270dp"
-                android:layout_height="100dp"
-                android:id="@+id/elementarymath"
-                android:src="@drawable/elementarymath"
-                android:layout_below="@+id/algebra"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:text="@string/geometry"
+            android:clickable="true"
+            android:id="@+id/geometry"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="220dp"
-                android:layout_height="107dp"
-                android:id="@+id/numbers"
-                android:src="@drawable/numbers"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/elementarymath" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logic"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:id="@+id/logic"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="230dp"
-                android:layout_height="30dp"
-                android:id="@+id/plotting"
-                android:src="@drawable/plotting"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matrices"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/matrices"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
 
-            <ImageButton
-                android:layout_width="180dp"
-                android:layout_height="100dp"
-                android:id="@+id/elipses"
-                android:src="@drawable/elipses"
-                android:layout_alignTop="@+id/numbers"
-                android:layout_toRightOf="@+id/numbers"
-                android:layout_toEndOf="@+id/numbers" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numbers"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:id="@+id/numbers"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
 
-        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number_theory"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/number_theory"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plotting"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:id="@+id/plotting"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trigonometry"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:id="@+id/trigonometry"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/pac_image"
+        android:src="@drawable/pacman"
+        android:layout_alignBottom="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:id="@+id/camera"
+        android:src="@drawable/camera"
+        android:layout_below="@+id/help_me_text"
+        android:layout_toRightOf="@+id/scrollView"
+        android:layout_toEndOf="@+id/scrollView" />
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:src="@drawable/duuuuh"-->
+        <!--android:layout_marginBottom="94dp"-->
+        <!--android:layout_alignBottom="@+id/scrollView"-->
+        <!--android:layout_alignLeft="@+id/logo"-->
+        <!--android:layout_alignStart="@+id/logo" />-->
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/scrollView2"-->
+        <!--android:layout_below="@+id/searchView"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" >-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="240dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:id="@+id/logic"-->
+                <!--android:src="@drawable/logic"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="230dp"-->
+                <!--android:layout_height="110dp"-->
+                <!--android:id="@+id/definition"-->
+                <!--android:src="@drawable/definition"-->
+                <!--android:layout_below="@+id/logic"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+               <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="180dp"-->
+                <!--android:layout_height="140dp"-->
+                <!--android:id="@+id/discretemath"-->
+                <!--android:src="@drawable/discretemath"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="131dp"-->
+                <!--android:id="@+id/calculus"-->
+                <!--android:src="@drawable/calculus"-->
+                <!--android:layout_below="@+id/discretemath"-->
+                <!--android:layout_toRightOf="@+id/definition"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:id="@+id/functions"-->
+                <!--android:src="@drawable/functions"-->
+                <!--android:layout_below="@+id/definition"-->
+                <!--android:layout_toLeftOf="@+id/discretemath"-->
+                <!--android:layout_toStartOf="@+id/discretemath"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="370dp"-->
+                <!--android:layout_height="130dp"-->
+                <!--android:id="@+id/trigonometry"-->
+                <!--android:src="@drawable/trigonometry"-->
+                <!--android:layout_below="@+id/calculus"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="220dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:src="@drawable/geometry"-->
+                <!--android:id="@+id/geometry"-->
+                <!--android:layout_below="@+id/trigonometry"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:id="@+id/appliedmath"-->
+                <!--android:src="@drawable/appliedmath"-->
+                <!--android:layout_alignTop="@+id/geometry"-->
+                <!--android:layout_toRightOf="@+id/geometry"-->
+                <!--android:layout_toEndOf="@+id/geometry"-->
+               <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="400dp"-->
+                <!--android:layout_height="130dp"-->
+                <!--android:id="@+id/algebra"-->
+                <!--android:src="@drawable/algebra"-->
+                <!--android:layout_below="@+id/geometry"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+               <!--/>-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="270dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:id="@+id/elementarymath"-->
+                <!--android:src="@drawable/elementarymath"-->
+                <!--android:layout_below="@+id/algebra"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="220dp"-->
+                <!--android:layout_height="107dp"-->
+                <!--android:id="@+id/numbers"-->
+                <!--android:src="@drawable/numbers"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/elementarymath" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="230dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:id="@+id/plotting"-->
+                <!--android:src="@drawable/plotting"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true" />-->
+
+            <!--<ImageButton-->
+                <!--android:layout_width="180dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:id="@+id/elipses"-->
+                <!--android:src="@drawable/elipses"-->
+                <!--android:layout_alignTop="@+id/numbers"-->
+                <!--android:layout_toRightOf="@+id/numbers"-->
+                <!--android:layout_toEndOf="@+id/numbers" />-->
+
+        <!--</RelativeLayout>-->
+
+   <!-- </ScrollView>-->
 
 
 </RelativeLayout>

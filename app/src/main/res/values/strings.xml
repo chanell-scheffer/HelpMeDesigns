@@ -6,4 +6,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="algebra">ALGEBRA</string>
+    <string name="applied_math">APPLIED MATH</string>
+    <string name="calculus">CALCULUS</string>
+    <string name="definition">DEFINITION</string>
+    <string name="discrete_math">DISCRETE MATH</string>
+    <string name="elementary_math">ELEMENTARY MATH</string>
+    <string name="ellipses">ELLIPSES</string>
+    <string name="functions">FUNCTIONS</string>
+    <string name="geometry">GEOMETRY</string>
+    <string name="logic">LOGIC</string>
+    <string name="matrices">MATRICES</string>
+    <string name="number_theory">NUMBER THEORY</string>
+    <string name="plotting">PLOTTING</string>
+    <string name="trigonometry">TRIGONOMETRY</string>
+    <string name="numbers">NUMBERS</string>
+    
+
 </resources>
