@@ -36,7 +36,8 @@
             android:value="@integer/google_play_services_version" />
     </application>
 
-    -
+
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />

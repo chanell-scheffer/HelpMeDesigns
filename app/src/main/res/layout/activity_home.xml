@@ -27,7 +27,7 @@
             android:textSize="59dp"
             android:textColor="@android:color/white"
             android:id="@+id/WelcomeTo"
-            android:layout_centerVerticle="true"
+            android:gravity="center"
             android:layout_marginTop="25dp"
             android:layout_gravity="center"
             android:layout_alignParentRight="true"
