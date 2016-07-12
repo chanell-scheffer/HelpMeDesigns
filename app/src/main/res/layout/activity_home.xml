@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/logo"
+            android:text=""
             android:layout_below="@id/WelcomeTo"
             android:src="@drawable/logo"
             android:layout_centerHorizontal="true"
