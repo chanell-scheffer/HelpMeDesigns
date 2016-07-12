@@ -19,7 +19,14 @@
     <string name="trigonometry">TRIGONOMETRY</string>
     <string name="numbers">NUMBERS</string>
 
-    <string name="welcome">WELCOME</string>
+    <string name="welcome">WELCOME TO...</string>
+    <string name="help">HELP ME...!!</string>
+    <string name="start">GET STARTED</string>
+    <string name="intro">INTRODUCTION</string>
+    <string name="about">WHAT IS ALL THIS ABOUT...??</string>
+    <string name="what">\n\nWelcome to HelpMe...!\n\nThis is a great way of learning. After using this app, you will NEVER have to struggle with Math again.\n\nHelpMe is an app that helps students solve mathematical problems simpler...
+just by taking a picture of your Maths problem, upload it and receiving the solution in seconds.\n\nIT's THAT SIMPLE.\n\nHAVE FUN...  !!(^= ^)!!</string>
+    <string name="continue_button">CONTINUE</string>
 
 
 </resources>

@@ -20,11 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="INTRODUCTION"
+        android:text="@string/intro"
         android:textSize="55dp"
         android:textColor="@android:color/holo_orange_dark"
         android:fontFamily="casual"
-        android:id="@+id/textView2"
+        android:id="@+id/intro"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />
@@ -32,12 +32,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="WHAT IS ALL THIS ABOUT...??\n"
+        android:text="@string/about"
         android:textSize="20dp"
-
         android:textColor="@android:color/background_light"
         android:id="@+id/About"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/intro"
         android:layout_centerHorizontal="true" />
 
     <ScrollView
@@ -53,7 +52,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="35dp"
-        android:text="CONTINUE..."
+        android:text="@string/continue_button"
         android:textStyle="bold"
         android:background="@android:color/holo_blue_dark"
         android:id="@+id/continue_button"
@@ -64,10 +63,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\n\nWelcome to HelpMe...!\n\nThis is a great way of learning. After using this app, you will NEVER have to struggle with Math again.\n\nHelpMe is an app that helps students solve mathematical problems simpler...
-just by taking a picture of your Maths problem, upload it and receiving the solution in seconds.\n\nIT's THAT SIMPLE.\n\nHAVE FUN...  !!(^= ^)!!"
-        android:id="@+id/textView4"
-
+        android:text="@string/what"
+        android:id="@+id/text"
         android:textSize="20dp"
         android:textColor="@android:color/white"
         android:layout_alignTop="@+id/About"
