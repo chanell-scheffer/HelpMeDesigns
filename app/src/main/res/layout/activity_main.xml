@@ -83,6 +83,7 @@
     android:layout_height="wrap_content"
     android:textColor="@android:color/white"
     android:clickable="true"
+    android:text="@string/algebra"
     android:id="@+id/algebra"
     android:layout_gravity="center"/>
 
