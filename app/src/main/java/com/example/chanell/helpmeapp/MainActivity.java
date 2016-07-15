@@ -6,55 +6,103 @@ import android.graphics.Bitmap;
 import android.graphics.Camera;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.io.File;
+
 public class MainActivity extends Activity {
+
     private static final int CAMERA_REQUEST = 1888;
     ImageButton camera;
-    //private static final Camera;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+    private File imageFile;
+
+
+//     public void onClick(View v){
+//         i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//         startActivityForResult(i,camera);
+//     }
 
     private GoogleApiClient client;
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         camera = (ImageButton) this.findViewById(R.id.camera);
-        camera.setOnClickListener(new View.OnClickListener()
-
-
-        {
+        camera = (ImageButton) this.findViewById(R.id.camera);
+        camera.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent cameraIntent = new Intent(
-                        MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
             }
+
+            public void picture(View view) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                imageFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"image.jpg");
+                Uri value = Uri.fromFile(imageFile);
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, value);
+                intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+                startActivityForResult(intent, 0);
+            }
+
+
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CAMERA_REQUEST) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            camera.setImageBitmap(photo);
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
 
+
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0) {
+            switch (resultCode) {
+                case Activity.RESULT_OK:
+                    if (imageFile.exists()) {
+                        Toast.makeText(this, "Saved " + imageFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(this, "Error saving ", Toast.LENGTH_LONG).show();
+                    }
+
+                    break;
+                case Activity.RESULT_CANCELED:
+                    break;
+
+                default:
+                    break;
+
+
+            }
+
+       if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+           Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            camera.setImageBitmap(imageBitmap);
+       }
+        }
+    }
+
+
     public void onStart() {
         super.onStart();
 
@@ -78,8 +126,6 @@ public class MainActivity extends Activity {
 
     }
 
-
-
     @Override
     public void onStop() {
         super.onStop();
@@ -99,7 +145,4 @@ public class MainActivity extends Activity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
-
-
-
 }

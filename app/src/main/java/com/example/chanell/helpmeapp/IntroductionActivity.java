@@ -25,9 +25,6 @@ public class IntroductionActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
     }
 
     @Override

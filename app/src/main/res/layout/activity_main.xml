@@ -261,6 +261,7 @@
         android:layout_height="39dp"
         android:id="@+id/camera"
         android:src="@drawable/camera"
+        android:onClick="picture"
         android:layout_below="@+id/help_me_text"
         android:layout_alignRight="@+id/help_me_text"
         android:layout_alignEnd="@+id/help_me_text" />
