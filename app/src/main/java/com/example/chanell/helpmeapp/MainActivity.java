@@ -47,15 +47,15 @@ public class MainActivity extends Activity {
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
             }
 
-            public void picture(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                imageFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"image.jpg");
-                Uri value = Uri.fromFile(imageFile);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, value);
-                intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
-                startActivityForResult(intent, 0);
-            }
-
+//            public void picture(View view) {
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                imageFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"image.jpg");
+//                Uri value = Uri.fromFile(imageFile);
+//                intent.putExtra(MediaStore.EXTRA_OUTPUT, value);
+//                intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+//                startActivityForResult(intent, 0);
+//            }
+//
 
         });
 
