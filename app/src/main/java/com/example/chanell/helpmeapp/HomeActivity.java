@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.WelcomeTo);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);
         textView.startAnimation(animation);
+        
     }
 
     @Override
