@@ -85,6 +85,7 @@ public class MainActivity extends Activity {
                     }
 
                     break;
+
                 case Activity.RESULT_CANCELED:
                     break;
 
@@ -99,6 +100,86 @@ public class MainActivity extends Activity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             camera.setImageBitmap(imageBitmap);
        }
+        }
+    }
+
+    public void click(View view) {
+        switch (view.getId()) {
+            case R.id.algebra:
+                Intent algebraIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.wolframalpha.com/input/?i=algebra"));
+                startActivity(algebraIntent);
+                break;
+
+            case R.id.applied_math:
+                Intent appliedIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.wolframalpha.com/input/?i=applied+mathematics"));
+                startActivity(appliedIntent);
+                break;
+
+            case R.id.calculus:
+                Intent calculusIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=calculus"));
+                startActivity(calculusIntent);
+                break;
+
+            case R.id.definition:
+                Intent definitionIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                startActivity(definitionIntent);
+                break;
+
+            case R.id.discrete_math:
+                Intent discreteMathIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=discrete+math"));
+                startActivity(discreteMathIntent);
+                break;
+
+            case R.id.elementary_math:
+                Intent elementaryIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=elementary+math"));
+                startActivity(elementaryIntent);
+                break;
+
+            case R.id.ellipses:
+                Intent ellipsesIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=ellipse+mathematics"));
+                startActivity(ellipsesIntent);
+                break;
+
+            case R.id.functions:
+                Intent functionsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=functions+mathematics"));
+                startActivity(functionsIntent);
+                break;
+
+            case R.id.geometry:
+                Intent geometryIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=geometry"));
+                startActivity(geometryIntent);
+                break;
+
+            case R.id.logic:
+                Intent logicIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=logic+math"));
+                startActivity(logicIntent);
+                break;
+
+            case R.id.matrices:
+                Intent matricesIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=matrices+math"));
+                startActivity(matricesIntent);
+                break;
+
+            case R.id.numbers:
+                Intent numbersIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=numbers"));
+                startActivity(numbersIntent);
+                break;
+
+            case R.id.number_theory:
+                Intent numberTheoryIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=number+theory"));
+                startActivity(numberTheoryIntent);
+                break;
+
+            case R.id.plotting:
+                Intent plottingIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=plotting"));
+                startActivity(plottingIntent);
+                break;
+
+            case R.id.trigonometry :
+                Intent trigIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wolframalpha.com/input/?i=trigonometry"));
+                startActivity(trigIntent);
+                break;
+
         }
     }
 
@@ -145,4 +226,5 @@ public class MainActivity extends Activity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
 }

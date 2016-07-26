@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     Button getStartedButton;
 
     public void zoom(View view) {
-        TextView textView = (TextView) findViewById(R.id.WelcomeTo);
+        TextView textView = (TextView) findViewById(R.id.Need_help);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);
         textView.startAnimation(animation);
     }
@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        TextView textView = (TextView) findViewById(R.id.WelcomeTo);
+        TextView textView = (TextView) findViewById(R.id.Need_help);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.jump);
         animation.setRepeatCount(Animation.INFINITE);
         textView.startAnimation(animation);

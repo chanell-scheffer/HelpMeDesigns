@@ -6,36 +6,39 @@
     android:background="@android:color/transparent">
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/background_image"
-        android:src="@drawable/starbucks"
-        android:scaleType="centerCrop"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+           <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background_im"
+    android:src="@drawable/birds"
+    android:scaleType="centerCrop"
+    android:layout_alignBottom="@+id/linearLayout"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/intro"
-        android:textSize="55dp"
-        android:textColor="@android:color/holo_orange_dark"
-        android:fontFamily="casual"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif"
         android:id="@+id/intro"
+        android:layout_marginTop="33dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="@string/about"
-        android:textSize="20dp"
-        android:textColor="@android:color/background_light"
+        android:textSize="17dp"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
         android:id="@+id/About"
+        android:textStyle="bold"
         android:layout_below="@+id/intro"
         android:layout_centerHorizontal="true" />
 
@@ -46,30 +49,32 @@
         android:layout_below="@+id/About"
         android:layout_centerHorizontal="true">
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="@string/what"
+            android:id="@+id/text"
+            android:textSize="14dp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/About"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="serif" />
     </ScrollView>
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="35dp"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
         android:text="@string/continue_button"
         android:textStyle="bold"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@android:color/holo_orange_light"
         android:id="@+id/continue_button"
+        android:layout_marginBottom="36dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp" />
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/what"
-        android:id="@+id/text"
-        android:textSize="20dp"
-        android:textColor="@android:color/white"
-        android:layout_alignTop="@+id/About"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
 
 </RelativeLayout>
