@@ -11,6 +11,7 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+apply plugin:'java'
 
 allprojects {
     repositories {
@@ -20,4 +21,8 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+dependencies {
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
